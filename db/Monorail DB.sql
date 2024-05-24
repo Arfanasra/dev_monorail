@@ -43,9 +43,6 @@ CREATE TABLE `ticket` (
 -- Dumping data for table `ticket`
 --
 
-INSERT INTO `ticket` (`id`, `namess`, `identification`, `from_dest`, `to_dest`, `category`, `trip`, `price`, `date_now`) VALUES
-(1, 'Adlaniq', '66463825592', 'Tun Sambathan', 'Imbi', 'Adult', 'One-way', 1.60, '2024-05-24 10:48:06');
-
 -- --------------------------------------------------------
 
 --
@@ -63,9 +60,6 @@ CREATE TABLE `user_form` (
 --
 -- Dumping data for table `user_form`
 --
-
-INSERT INTO `user_form` (`id`, `name`, `email`, `password`, `user_type`) VALUES
-(1, 'Adlaniq', 'adlaniq20@gmail.com', '86b19a0013a70a10e5c46bfd2b0b8504', '');
 
 --
 -- Indexes for dumped tables
