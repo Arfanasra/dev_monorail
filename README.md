@@ -48,6 +48,12 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
 
     Open your web browser and go to `http://localhost:80/dev_monorail`.
 
+4. **Stop and remove using Docker Compose:**
+
+    ```sh
+    docker-compose down
+    ```
+   
 ## Usage
 
 ### User Registration
