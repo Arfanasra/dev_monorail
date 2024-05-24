@@ -11,7 +11,6 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
 - [Usage](#usage)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Features
