@@ -45,9 +45,13 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
 
 3. **Access the application:**
 
-    Open your web browser and go to `http://localhost:80/dev_monorail`.
+    Open your web browser and go to (http://localhost:80/dev_monorail).
+   
+5. **Access the application:**
 
-4. **Stop and remove using Docker Compose:**
+    To access PHPMyAdmin go to (http://localhost:8001/).
+    
+6. **Stop and remove using Docker Compose:**
 
     ```sh
     docker-compose down
@@ -100,3 +104,7 @@ If you have any questions or suggestions, feel free to reach out:
 - **GitHub**: [Adlaniq](https://github.com/Adlaniq)
 
 Thank you for using Dev Monorail!
+
+## Additional Information
+
+This project utilizes Apache, PHP, and phpMyAdmin. phpMyAdmin can be accessed on port 8001.
