@@ -1,0 +1,27 @@
+# Ignore MacOS metadata files
+__MACOSX/
+
+# Ignore node_modules (in case of Node.js dependencies)
+node_modules/
+
+# Ignore log files and databases
+*.log
+*.sqlite3
+
+# Ignore compiled files
+*.pyc
+*.pyo
+
+# Ignore the eternaljk-win32-portable directory contents
+dev_monorail/eternaljk-win32-portable/
+
+# Ignore other potential temporary or build directories/files
+dist/
+build/
+tmp/
+*.tmp
+*.swp
+*.bak
+
+# Ignore sensitive configuration files
+.env
