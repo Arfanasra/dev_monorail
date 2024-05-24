@@ -78,3 +78,26 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
 
 1. Navigate to the guest management section.
 2. View, add, or remove guest information as needed.
+
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
+
+Please ensure your code adheres to the project's coding standards and includes appropriate tests.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+- **Email**: adlaniq20@example.com
+- **GitHub**: [Adlaniq](https://github.com/Adlaniq)
+
+Thank you for using Dev Monorail!
