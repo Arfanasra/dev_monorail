@@ -160,7 +160,7 @@
               if (isset($message)) {
 
                 // Creating database connection
-                $conn = new mysqli("localhost", "root", "", "monoraildb");
+                $conn = new mysqli('db','php_docker','password','monoraildb');
 
                 // Checking connection
                 if ($conn == false) {
