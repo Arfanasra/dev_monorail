@@ -1,0 +1,515 @@
+ .u-section-1 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("images/monorail.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 100vh;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 231px auto 0;
+}
+
+.u-section-1 .u-text-2 {
+  margin: 46px 33px 0;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 44px auto 60px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 776px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: 214px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 594px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 446px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 281px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 3.75rem;
+  }
+} .u-section-2 {
+  min-height: 1022px;
+}
+
+.u-section-2 .u-shape-1 {
+  width: calc(((100% - 1140px) / 2) + 587px);
+  height: 961px;
+  margin: 0 0 0 auto;
+}
+
+.u-section-2 .u-image-1 {
+  height: 551px;
+  width: 979px;
+  margin: -873px auto 0 calc(((100% - 1140px) / 2));
+}
+
+.u-section-2 .u-layout-wrap-1 {
+  width: 928px;
+  margin: -205px calc(((100% - 1140px) / 2) + 60px) 60px auto;
+}
+
+.u-section-2 .u-layout-cell-1 {
+  min-height: 475px;
+  background-image: none;
+}
+
+.u-section-2 .u-container-layout-1 {
+  padding: 30px 44px 34px;
+}
+
+.u-section-2 .u-text-1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.u-section-2 .u-text-2 {
+  margin: 61px 0 0;
+}
+
+.u-section-2 .u-btn-1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  background-image: none;
+  margin: 51px auto 0;
+  padding: 19px 53px 20px 52px;
+}
+
+.u-section-2 .u-layout-cell-2 {
+  min-height: 120px;
+}
+
+.u-section-2 .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-section-2 .u-image-2 {
+  min-height: 355px;
+  background-image: url("images/monorail2.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-2 .u-container-layout-3 {
+  padding: 30px;
+}
+
+@media (max-width: 1199px) {
+   .u-section-2 {
+    min-height: 891px;
+  }
+
+  .u-section-2 .u-shape-1 {
+    width: calc(((100% - 940px) / 2) + 587px);
+  }
+
+  .u-section-2 .u-image-1 {
+    height: 529px;
+    width: 940px;
+    margin-left: calc(((100% - 940px) / 2));
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    margin-top: -183px;
+    margin-right: calc(((100% - 940px) / 2) + 12px);
+  }
+
+  .u-section-2 .u-layout-cell-1 {
+    min-height: 600px;
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 110px;
+  }
+
+  .u-section-2 .u-image-2 {
+    min-height: 405px;
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-2 {
+    min-height: 646px;
+  }
+
+  .u-section-2 .u-shape-1 {
+    width: calc(((100% - 720px) / 2) + 587px);
+  }
+
+  .u-section-2 .u-image-1 {
+    height: 405px;
+    width: 720px;
+    margin-left: calc(((100% - 720px) / 2));
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    width: 720px;
+    margin-top: -59px;
+    margin-right: calc(((100% - 720px) / 2));
+  }
+
+  .u-section-2 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 2.25rem;
+  }
+
+  .u-section-2 .u-image-2 {
+    min-height: 310px;
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-2 {
+    min-height: 1022px;
+  }
+
+  .u-section-2 .u-shape-1 {
+    width: calc(((100% - 540px) / 2) + 540px);
+  }
+
+  .u-section-2 .u-image-1 {
+    height: 304px;
+    width: 540px;
+    margin-left: calc(((100% - 540px) / 2));
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    width: 540px;
+    margin-top: 42px;
+    margin-right: calc(((100% - 540px) / 2));
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 234px;
+  }
+
+  .u-section-2 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-image-2 {
+    min-height: 607px;
+  }
+
+  .u-section-2 .u-container-layout-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-2 {
+    min-height: 623px;
+  }
+
+  .u-section-2 .u-shape-1 {
+    width: calc(((100% - 340px) / 2) + 340px);
+  }
+
+  .u-section-2 .u-image-1 {
+    height: 191px;
+    width: 340px;
+    margin-left: calc(((100% - 340px) / 2));
+  }
+
+  .u-section-2 .u-layout-wrap-1 {
+    width: 340px;
+    margin-right: calc(((100% - 340px) / 2));
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-left: 10px;
+  }
+
+  .u-section-2 .u-layout-cell-2 {
+    min-height: 188px;
+  }
+
+  .u-section-2 .u-image-2 {
+    min-height: 382px;
+  }
+} .u-section-3 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("images/monorail.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-3 .u-sheet-1 {
+  min-height: 800px;
+}
+
+.u-section-3 .u-text-1 {
+  margin: 36px auto 0;
+}
+
+.u-section-3 .u-image-1 {
+  width: 570px;
+  height: 1091px;
+  margin: 40px auto 60px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-3 .u-sheet-1 {
+    min-height: 660px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-3 .u-sheet-1 {
+    min-height: 506px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-3 .u-sheet-1 {
+    min-height: 323px;
+  }
+
+  .u-section-3 .u-image-1 {
+    width: 540px;
+    height: 1034px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-3 .u-image-1 {
+    width: 340px;
+    height: 651px;
+  }
+} .u-section-4 {
+  background-image: none;
+}
+
+.u-section-4 .u-sheet-1 {
+  min-height: 464px;
+}
+
+.u-section-4 .u-table-1 {
+  margin: 42px auto 42px 0;
+}
+
+.u-section-4 .u-table-entity-1 {
+  min-height: 100px;
+}
+
+.u-section-4 .u-table-header-1 {
+  font-weight: 700;
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-13 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-20 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-25 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-37 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-49 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-61 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-73 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-85 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-97 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-109 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-121 {
+  background-image: none;
+}
+
+.u-section-4 .u-table-cell-133 {
+  background-image: none;
+}
+
+@media (max-width: 1199px) {
+  .u-section-4 .u-table-1 {
+    margin-right: initial;
+    margin-left: initial;
+  }
+} .u-section-5 {
+  background-image: none;
+}
+
+.u-section-5 .u-sheet-1 {
+  min-height: 730px;
+}
+
+.u-section-5 .u-layout-wrap-1 {
+  margin: 70px 0;
+}
+
+.u-section-5 .u-image-1 {
+  min-height: 600px;
+  background-image: url("images/monorail2.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-5 .u-container-layout-1 {
+  padding: 30px 60px;
+}
+
+.u-section-5 .u-layout-cell-2 {
+  min-height: 600px;
+}
+
+.u-section-5 .u-container-layout-2 {
+  padding: 30px 60px;
+}
+
+.u-section-5 .u-text-1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 92px auto 0 0;
+}
+
+.u-section-5 .u-text-2 {
+  font-size: 1.25rem;
+  margin: 97px 0 0;
+}
+
+.u-section-5 .u-btn-1 {
+  margin: 92px auto 0;
+  padding: 20px 53px 20px 52px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-5 .u-sheet-1 {
+    min-height: 100px;
+  }
+
+  .u-section-5 .u-layout-wrap-1 {
+    margin-right: initial;
+    margin-left: initial;
+  }
+
+  .u-section-5 .u-image-1 {
+    min-height: 495px;
+  }
+
+  .u-section-5 .u-layout-cell-2 {
+    min-height: 495px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-5 .u-image-1 {
+    min-height: 379px;
+  }
+
+  .u-section-5 .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-5 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-5 .u-container-layout-2 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-5 .u-sheet-1 {
+    min-height: 390px;
+  }
+
+  .u-section-5 .u-image-1 {
+    min-height: 569px;
+  }
+
+  .u-section-5 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-5 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-5 .u-sheet-1 {
+    min-height: 179px;
+  }
+
+  .u-section-5 .u-image-1 {
+    min-height: 358px;
+  }
+
+  .u-section-5 .u-text-1 {
+    font-size: 1.5rem;
+  }
+}
