@@ -84,4 +84,4 @@
 
     - name: Execute docker-compose up on Slave
       become: yes
-      shell: docker-compose -f /home/WebApp/docker-compose.yml up -d
+      shell: docker compose -f /home/WebApp/docker-compose.yml up -d
