@@ -2,7 +2,7 @@
 172.31.47.213  ansible_user=root
 
 [prometheus]
-172.31.44.4  ansible_user=root
+172.31.34.212  ansible_user=root
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
