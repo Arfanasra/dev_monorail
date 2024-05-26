@@ -43,15 +43,11 @@
         state: latest
         update_cache: true
 
-    - name: Create a Python virtual environment
-      command: python3 -m venv {{ venv_path }}
-      args:
-        creates: "{{ venv_path }}"
-
-    - name: Install Docker Module for Python inside virtualenv
-      pip:
-        virtualenv: "{{ venv_path }}"
-        name: docker
+    - name: Install python3-requests
+      apt:
+        name: python3-requests
+        state: latest
+        update_cache: true
 
     - name: Pull default Docker image
       community.docker.docker_image:
