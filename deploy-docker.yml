@@ -72,4 +72,4 @@
         chmod +x ~/.docker/cli-plugins/docker-compose
 
     - name: Run docker-compose up
-      shell: docker compose up -d
+      shell: docker compose -f /var/lib/jenkins/workspace$ Final\ Project/ up -d
