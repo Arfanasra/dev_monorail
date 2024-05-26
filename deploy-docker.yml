@@ -71,5 +71,9 @@
         -o ~/.docker/cli-plugins/docker-compose && 
         chmod +x ~/.docker/cli-plugins/docker-compose
 
-    - name: Run docker-compose up
-      shell: docker compose -f "/var/lib/jenkins/workspace/Final\ Project/docker-compose.yml" up -d
+    - name: Clone Docker Compose repository on Slave
+      become: yes
+      git:
+        repo: https://github.com/Adlaniq/dev_monorail.git
+        clone: yes
+
