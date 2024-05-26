@@ -1,5 +1,5 @@
 ---
-- hosts: slaves
+- hosts: all
   become: true
   vars:
     container_count: 4
@@ -71,6 +71,9 @@
         -o ~/.docker/cli-plugins/docker-compose && 
         chmod +x ~/.docker/cli-plugins/docker-compose
         
+- hosts: slaves
+  become: true
+  tasks:
     - name: Create directory for Web App
       shell: mkdir -p /home/WebApp/
       
