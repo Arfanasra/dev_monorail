@@ -108,7 +108,7 @@
     - name: Execute command inside Prometheus container
       docker_container:
         name: prometheus_container
-        exec_id: "{{ inventory_hostname }}"
+        exec_id: "prometheus_container"
         command: /bin/sh
         interactive: yes
         tty: yes
