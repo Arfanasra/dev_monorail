@@ -92,7 +92,16 @@
 - hosts: prometheus
   become: yes
   tasks:
-    - name: Create the file ikan.txt with content "I am ikan" in the home directory
-      copy:
-        dest: ~/ikan.txt
-        content: "I am ikan"
+    - name: Pull Prometheus image
+      docker_image:
+        name: prom/prometheus
+        source: pull
+
+    - name: Run Prometheus container
+      docker_container:
+        name: prometheus_container
+        image: prom/prometheus
+        state: started
+        restart_policy: always
+        ports:
+          - "9090:9090"
