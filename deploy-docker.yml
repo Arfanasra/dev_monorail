@@ -107,11 +107,6 @@
           - "9090:9090"
     - name: Execute command inside Prometheus container
       docker_container:
-        name: prometheus_container
-        exec_id: "prometheus_container"
-        command: /bin/sh
-        interactive: yes
-        tty: yes
-        detach: no
-      register: exec_output
+        name: prometheus_container  # Specify the name of your Prometheus container
+        command: /bin/sh -c
 
