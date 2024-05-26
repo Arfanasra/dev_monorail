@@ -1,5 +1,5 @@
 ---
-- hosts: slave-server
+- hosts: slaves
   become: true
   vars:
     container_count: 4
