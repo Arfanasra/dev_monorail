@@ -8,13 +8,14 @@ services:
       MYSQL_USER: php_docker
       MYSQL_PASSWORD: password 
       MYSQL_ALLOW_EMPTY_PASSWORD: "1"
-      
+    volumes:
+      - "./db:/docker-entrypoint-initdb.d"
     ports:
       - "3306:3306"  # Expose MySQL port
 
   www:
     image: php:7.4-apache  # Specify a version for consistency
-    volumes:
+    volumes: 
       - "./:/var/www/html"
     ports:
       - "80:80"
