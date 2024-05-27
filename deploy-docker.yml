@@ -62,14 +62,23 @@
         state: present
       with_sequence: count={{ container_count }}
 
-    - name: Create directory for docker CLI plugins
-      shell: mkdir -p ~/.docker/cli-plugins/
+    - name: Create directory for Docker Compose plugins
+      file:
+        path: /root/.docker/cli-plugins
+        state: directory
 
-    - name: Download and install docker-compose
-      shell: >
-        curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 
-        -o ~/.docker/cli-plugins/docker-compose && 
-        chmod +x ~/.docker/cli-plugins/docker-compose
+    - name: Download Docker Compose to temporary location
+      command: wget -O /tmp/docker-compose https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64
+      args:
+        creates: /tmp/docker-compose
+
+    - name: Move Docker Compose to final location
+      command: mv /tmp/docker-compose /root/.docker/cli-plugins/docker-compose
+
+    - name: Ensure Docker Compose is executable
+      file:
+        path: /root/.docker/cli-plugins/docker-compose
+        mode: '0755'
         
 - hosts: slaves
   become: true
