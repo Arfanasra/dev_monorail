@@ -95,11 +95,8 @@
         clone: yes
 
     - name: Execute docker-compose up on Slave
-      command: docker-compose -f /home/WebApp/docker-compose.yml up
-      args:
-        chdir: /home/WebApp/
-      environment:
-        COMPOSE_PROJECT_NAME: webapp
+      become: yes
+      shell: docker compose -f /home/WebApp/docker-compose.yml up -d
 
 - hosts: prometheus
   become: yes
