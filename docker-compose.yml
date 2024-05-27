@@ -1,15 +1,23 @@
 version: '3.8'
 
 services:
-  db: 
-    image: mysql:latest
+  db:
+    image: mysql:5.7
+    restart: always
+    container_name: db
     environment:
-      - MYSQL_DATABASE=monoraildb
-      - MYSQL_USER=php_docker
-      - MYSQL_PASSWORD=password # this should live in a env var
-      - MYSQL_ALLOW_EMPTY_PASSWORD=1 # equivalent to True
-    volumes:
-      - "./db:/docker-entrypoint-initdb.d" # this is how we persist a sql db even when container stops
+      - MYSQL_ROOT_PASSWORD=rootpasswd
+      - MYSQL_DATABASE=phpmyadmin
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=userpasswd
+    networks:
+      - db
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: "mysqladmin ping -h localhost"
+      interval: 1s
+      timeout: 1s
+      retries: 60
   www:
     image: php:apache
     volumes:
