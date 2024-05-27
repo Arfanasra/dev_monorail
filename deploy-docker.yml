@@ -75,19 +75,22 @@
   become: true
   tasks:
     - name: Create directory for Web App
-      shell: mkdir -p /home/WebApp/
-      
+      file:
+        path: /home/WebApp/
+        state: directory
+
     - name: Clone Docker Compose repository on Slave
-      become: yes
       git:
         repo: https://github.com/Adlaniq/dev_monorail.git
         dest: /home/WebApp/
-
         clone: yes
 
     - name: Execute docker-compose up on Slave
-      become: yes
-      shell: docker compose -f /home/WebApp/docker-compose.yml up -d
+      shell: docker-compose -f /home/WebApp/docker-compose.yml up -d
+      args:
+        chdir: /home/WebApp/
+      environment:
+        COMPOSE_PROJECT_NAME: webapp
 
 - hosts: prometheus
   become: yes
@@ -110,7 +113,6 @@
       docker_image:
         name: grafana/grafana
         source: pull
-      tags: grafana
 
     - name: Run Grafana container
       docker_container:
@@ -120,4 +122,4 @@
         ports:
           - "3000:3000"
         restart_policy: unless-stopped
-      tags: grafana
+
