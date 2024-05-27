@@ -105,3 +105,19 @@
         restart_policy: always
         ports:
           - "9090:9090"
+
+    - name: Pull the Grafana Docker image
+      docker_image:
+        name: grafana/grafana
+        source: pull
+      tags: grafana
+
+    - name: Run Grafana container
+      docker_container:
+        name: grafana
+        image: grafana/grafana
+        state: started
+        ports:
+          - "3000:3000"
+        restart_policy: unless-stopped
+      tags: grafana
