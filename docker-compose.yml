@@ -9,7 +9,7 @@ services:
       MYSQL_PASSWORD: password 
       MYSQL_ALLOW_EMPTY_PASSWORD: "1"
     volumes:
-      - "/Users/adlaniq/ansible_project/db/db:/docker-entrypoint-initdb.d"
+      - "./db:/docker-entrypoint-initdb.d"
     ports:
       - "3306:3306"  # Expose MySQL port
 
