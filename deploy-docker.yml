@@ -95,7 +95,7 @@
         clone: yes
 
     - name: Execute docker-compose up on Slave
-      shell: docker-compose -f /home/WebApp/docker-compose.yml up
+      command: docker-compose -f /home/WebApp/docker-compose.yml up
       args:
         chdir: /home/WebApp/
       environment:
