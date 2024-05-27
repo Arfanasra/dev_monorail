@@ -135,13 +135,14 @@
       get_url:
         url: "https://github.com/prometheus/blackbox_exporter/releases/download/v0.25.0/blackbox_exporter-0.25.0.linux-amd64.tar.gz"
         dest: "/home/blackbox_exporter-0.25.0.linux-amd64.tar.gz"
-      
+
     - name: Extract blackbox_exporter tarball
       ansible.builtin.unarchive:
-        src: "/tmp/blackbox_exporter-0.25.0.linux-amd64.tar.gz"
+        src: "/home/blackbox_exporter-0.25.0.linux-amd64.tar.gz"
         dest: "/home/"
         remote_src: yes
-        
+
     - name: Run blackbox_exporter Docker container
       ansible.builtin.shell:
-        cmd: "docker run --rm -p 9115:9115/tcp --name blackbox_exporter -v $(pwd):/config quay.io/prometheus/blackbox-exporter:latest --config.file=/config/blackbox.yml"
+        cmd: "docker run --rm -p 9115:9115/tcp --name blackbox_exporter -v $(pwd):/config quay.io/prometheus/blackbox-exporter:latest --config.file=/config/>
+        chdir: "/home/blackbox_exporter-0.25.0.linux-amd64"  # Change directory to where blackbox_exporter is installed
