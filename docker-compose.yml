@@ -4,31 +4,25 @@ services:
   db: 
     image: mysql:latest
     environment:
-      MYSQL_DATABASE: monoraildb
-      MYSQL_USER: php_docker
-      MYSQL_PASSWORD: password 
-      MYSQL_ALLOW_EMPTY_PASSWORD: "1"
+      - MYSQL_DATABASE=monoraildb
+      - MYSQL_USER=php_docker
+      - MYSQL_PASSWORD=password # this should live in a env var
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1 # equivalent to True
     volumes:
-      - "./db:/docker-entrypoint-initdb.d"
-    ports:
-      - "3306:3306"  # Expose MySQL port
-
+      - "./db:/docker-entrypoint-initdb.d" # this is how we persist a sql db even when container stops
   www:
-    image: php:7.4-apache  # Specify a version for consistency
-    volumes: 
-      - "./:/var/www/html"
+    image: php:apache
+    volumes:
+      - "./:/var/www/html" # sync the current dir on local machine to the dir of container
     ports:
-      - "80:80"
-    depends_on:
-      - db
+      - 80:80
+      - 443:443 # for future ssl traffic
     entrypoint: /bin/sh -c "docker-php-ext-install mysqli && apache2-foreground"
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
-      - "8001:80"
+      - 8001:80
     environment:
-      PMA_HOST: db
-      PMA_PORT: 3306
-    depends_on:
-      - db
+      - PMA_HOST=db
+      - PMA_PORT=3306
