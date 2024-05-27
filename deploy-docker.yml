@@ -131,7 +131,7 @@
           - "3000:3000"
         restart_policy: unless-stopped
 
-            - name: Download blackbox_exporter tarball
+    - name: Download blackbox_exporter tarball
       get_url:
         url: "https://github.com/prometheus/blackbox_exporter/releases/download/v0.25.0/blackbox_exporter-0.25.0.linux-amd64.tar.gz"
         dest: "/home/blackbox_exporter-0.25.0.linux-amd64.tar.gz"
