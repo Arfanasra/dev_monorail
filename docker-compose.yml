@@ -9,6 +9,7 @@ services:
       MYSQL_USER: php_docker
       MYSQL_PASSWORD: password # this should live in a env var
       MYSQL_ALLOW_EMPTY_PASSWORD: 1 # equivalent to True
+      MYSQL_ROOT_HOST: '%'
     volumes:
       - "./db:/docker-entrypoint-initdb.d" # this is how we persist a sql db even when container stops
 
