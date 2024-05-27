@@ -145,4 +145,3 @@
     - name: Run blackbox_exporter Docker container
       ansible.builtin.shell:
         cmd: "docker run --rm -p 9115:9115/tcp --name blackbox_exporter -v $(pwd):/config quay.io/prometheus/blackbox-exporter:latest --config.file=/config/blackbox.yml"
-        chdir: "/opt/blackbox_exporter-0.25.0.linux-amd64" 
