@@ -115,7 +115,7 @@
 
     - name: Download custom Prometheus config file from GitHub
       get_url:
-        url: https://github.com/Adlaniq/dev_monorail/blob/544e13f57d8b6aa2bd4e2ca9fb8403a9bdc2329f/Prometheus/prometheus.yml
+        url: https://raw.githubusercontent.com/Adlaniq/dev_monorail/main/deploy-docker.yml
         dest: /etc/prometheus/prometheus.yml
 
     - name: Run Prometheus container
