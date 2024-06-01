@@ -108,6 +108,16 @@
         name: prom/prometheus
         source: pull
 
+    - name: Create Prometheus config directory
+      file:
+        path: /etc/prometheus
+        state: directory
+
+    - name: Download custom Prometheus config file from GitHub
+      get_url:
+        url: https://raw.githubusercontent.com/Adlaniq/dev_monorail/cce7a6d3e814d4c9f58d48c524168a2b83913d8e/Prometheus/prometheus.yml
+        dest: /etc/prometheus/prometheus.yml
+
     - name: Run Prometheus container
       docker_container:
         name: prometheus_container
@@ -116,6 +126,9 @@
         restart_policy: always
         ports:
           - "9090:9090"
+        volumes:
+          - /etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
 
     - name: Pull the Grafana Docker image
       docker_image:
