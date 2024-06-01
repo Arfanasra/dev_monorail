@@ -1,8 +1,8 @@
 [slaves]
-172.31.28.78  ansible_user=root
+172.31.31.206  ansible_user=root
 
 [prometheus]
-172.31.19.104  ansible_user=root
+172.31.20.147  ansible_user=root
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
