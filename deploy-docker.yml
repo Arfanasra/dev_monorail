@@ -168,7 +168,7 @@
 
     - name: Verify blackbox_exporter is running
       ansible.builtin.shell:
-        cmd: "docker ps -f name=blackbox_exporter"
+        cmd: "docker ps"
       register: docker_ps
 
     - name: Print docker ps output
