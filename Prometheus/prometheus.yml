@@ -37,7 +37,7 @@ scrape_configs:
         - http://prometheus.io    # Target to probe with http.
         - https://prometheus.io   # Target to probe with https.
         - http://example.com:8080 # Target to probe with http on port 8080.
-        - http://52.76.29.39/dev_monorail/
+        - http://52.220.48.251/dev_monorail/
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
