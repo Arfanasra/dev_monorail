@@ -32,7 +32,29 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
 ### Important Reminders
 
 - Update IP Addresses in dev.inv: Ensure you modify the IP addresses in the dev.inv file to match your deployment environment.
-- Customize prometheus.yml: Update the target addresses in the prometheus.yml file to match the specific use case of the website you want to scrape. Replace the sample addresses with your actual blackbox addresses.
+- Customize prometheus.yml: Update the target addresses in the prometheus.yml file to match the specific use case of the website you want to scrape. Replace the sample addresses with your actual blackbox addresses. File is located in Prometheus/prometheus.yml
+```
+  - job_name: 'blackbox'
+    metrics_path: /probe
+    params:
+      module: [http_2xx]  # Look for a HTTP 200 response.
+    static_configs:
+      - targets:
+        - http://prometheus.io    # Target to probe with http.
+        - https://prometheus.io   # Target to probe with https.
+        - http://example.com:8080 # Target to probe with http on port 8080.
+        - http://52.220.48.251/dev_monorail/  # Add your own website lists here
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 52.76.29.39:9115  # The blackbox exporter's real hostname:port.
+  - job_name: 'blackbox_exporter'  # collect blackbox exporter's operational metrics.
+    static_configs:
+      - targets: ['52.76.29.39:9115']  # The blackbox exporter's real hostname:port
+```
 - Ansible Installation: Ensure that Ansible is installed on the Master VM where Jenkins is installed.
 - SSH Configuration: Confirm that the root user on the Master VM can SSH into the root accounts of the Slave and Prometheus VMs without requiring password input (e.g., via SSH keys).
 
