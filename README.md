@@ -69,26 +69,26 @@ pipeline {
 ```
 ### Running the Pipeline
 
-	•	Commit changes to your repository to trigger the Jenkins pipeline.
-	•	Use Jenkins to build and deploy by clicking ‘Build Now’.
-	•	Monitor the deployment through the Jenkins console output.
+- Commit changes to your repository to trigger the Jenkins pipeline.
+- Use Jenkins to build and deploy by clicking ‘Build Now’.
+- Monitor the deployment through the Jenkins console output.
 
 ### Monitoring and Alerts
 
-	•	Access Prometheus at http://<prometheus-server>:9090 to view metrics.
-	•	Grafana can also be configured to visualize the metrics collected by Prometheus.
+- Access Prometheus at http://<prometheus-server>:9090 to view metrics.
+- Grafana can also be configured to visualize the metrics collected by Prometheus.
 
 ### Important Reminders
 
-	•	Update IP Addresses in dev.inv: Ensure you modify the IP addresses in the dev.inv file to match your deployment environment.
-	•	Customize prometheus.yml: Update the target addresses in the prometheus.yml file to match the specific use case of the website you want to scrape. Replace the sample addresses with your actual blackbox addresses.
-	•	Ansible Installation: Ensure that Ansible is installed on the Master VM where Jenkins is installed.
-	•	SSH Configuration: Confirm that the root user on the Master VM can SSH into the root accounts of the Slave and Prometheus VMs without requiring password input (e.g., via SSH keys).
+- Update IP Addresses in dev.inv: Ensure you modify the IP addresses in the dev.inv file to match your deployment environment.
+- Customize prometheus.yml: Update the target addresses in the prometheus.yml file to match the specific use case of the website you want to scrape. Replace the sample addresses with your actual blackbox addresses.
+- Ansible Installation: Ensure that Ansible is installed on the Master VM where Jenkins is installed.
+- SSH Configuration: Confirm that the root user on the Master VM can SSH into the root accounts of the Slave and Prometheus VMs without requiring password input (e.g., via SSH keys).
 
 ### Troubleshooting
 
-	•	Check Jenkins logs for errors during the build or deployment stages.
-	•	Verify Docker and Ansible logs on the deployment servers if there are issues during the deployment.
+- Check Jenkins logs for errors during the build or deployment stages.
+- Verify Docker and Ansible logs on the deployment servers if there are issues during the deployment.
 
 ## Contributing
 
