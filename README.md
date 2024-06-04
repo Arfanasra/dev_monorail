@@ -110,7 +110,7 @@ pipeline {
 }
 ```
 
-![Description of image](https://drive.google.com/uc?export=view&id=13WWE9F22DvoEyFmBofVGI1MP6GUNYR1E)
+<img src="https://drive.google.com/uc?export=view&id=13WWE9F22DvoEyFmBofVGI1MP6GUNYR1E" alt="Description of image" width="300">
 
 ### Running the Pipeline
 
