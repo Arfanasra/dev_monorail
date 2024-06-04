@@ -9,7 +9,7 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
 - [Important Reminders](#important-reminders)
 - [Jenkins Pipeline Setup](#jenkins-pipeline-setup)
 - [Running the Pipeline](#running-the-pipeline)
-- [Monitoring and Alerts](#monitoring-and-alerts)
+- [Accessing the Application and Monitoring Tools](#Accessing-the-Application-and-Monitoring-Tools)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [Contact](#contact)
@@ -115,10 +115,17 @@ pipeline {
 - Use Jenkins to build and deploy by clicking ‘Build Now’.
 - Monitor the deployment through the Jenkins console output.
 
-### Monitoring and Alerts
+### Accessing the Application and Monitoring Tools
 
-- Access Prometheus at `http://<prometheus-server>:9090` to view metrics.
-- Grafana can also be configured to visualize the metrics collected by Prometheus.
+Once the containers are up and running, you can access the web application and monitoring tools as follows:
+
+- **Dev Monorail Web Application:** Access the main application interface at `http://<vm_ip>/dev_monorail/`.
+- **phpMyAdmin:** Manage your database via phpMyAdmin at `http://<vm_ip>:8001`.
+- **Prometheus:** View application metrics by navigating to `http://<vm_ip>:9090`.
+- **Grafana:** Visualize the metrics collected by Prometheus at `http://<vm_ip>:3000`.
+- **Blackbox Exporter:** Monitor various endpoints using Blackbox Exporter at `http://<vm_ip>:9115`.
+
+Ensure that your firewall and network settings allow access to these ports to interact with the application, database management interface, and monitoring tools.
 
 ### Troubleshooting
 
