@@ -109,6 +109,9 @@ pipeline {
     }
 }
 ```
+
+[](https://drive.google.com/file/d/13WWE9F22DvoEyFmBofVGI1MP6GUNYR1E/view?usp=sharing)
+
 ### Running the Pipeline
 
 - Commit changes to your repository to trigger the Jenkins pipeline.
