@@ -60,16 +60,29 @@ Include steps in your `Jenkinsfile` to check out the code, build the Docker imag
 ```groovy
 pipeline {
     agent any
+    
     stages {
-        stage('Checkout') {
+        stage('SCM') {
             steps {
-                git 'https://github.com/yourusername/dev_monorail.git'
+                git branch: 'main',
+                    credentialsId: 'Github',
+                    url: 'https://github.com/your_username/dev_monorail.git'
             }
         }
-        stage('Build and Deploy') {
-            steps {
-                sh 'ansible-playbook -i inventory/prod deploy-docker.yml'
+        
+        stage('Docker Deploy'){
+            steps{
+                ansiblePlaybook credentialsId: 'slave-server', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml', vaultTmpPath: ''
             }
+        }
+    }
+    
+    post {
+        success {
+            echo 'Pipeline completed successfully'
+        }
+        failure {
+            echo 'Pipeline failed'
         }
     }
 }
