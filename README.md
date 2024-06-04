@@ -6,10 +6,10 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
 
 - [Prerequisites](#prerequisites)
 - [Infrastructure Requirements](#infrastructure-requirements)
+- [Important Reminders](#important-reminders)
 - [Jenkins Pipeline Setup](#jenkins-pipeline-setup)
 - [Running the Pipeline](#running-the-pipeline)
 - [Monitoring and Alerts](#monitoring-and-alerts)
-- [Important Reminders](#important-reminders)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [Contact](#contact)
@@ -28,6 +28,13 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
   - **Slave VM:** Target deployment server for the application.
   - **Prometheus VM:** Hosts Prometheus and optionally Grafana for monitoring.
 - Ensure that these VMs are properly configured and networked to communicate with each other.
+
+### Important Reminders
+
+- Update IP Addresses in dev.inv: Ensure you modify the IP addresses in the dev.inv file to match your deployment environment.
+- Customize prometheus.yml: Update the target addresses in the prometheus.yml file to match the specific use case of the website you want to scrape. Replace the sample addresses with your actual blackbox addresses.
+- Ansible Installation: Ensure that Ansible is installed on the Master VM where Jenkins is installed.
+- SSH Configuration: Confirm that the root user on the Master VM can SSH into the root accounts of the Slave and Prometheus VMs without requiring password input (e.g., via SSH keys).
 
 ## Jenkins Pipeline Setup
 
@@ -77,13 +84,6 @@ pipeline {
 
 - Access Prometheus at `http://<prometheus-server>:9090` to view metrics.
 - Grafana can also be configured to visualize the metrics collected by Prometheus.
-
-### Important Reminders
-
-- Update IP Addresses in dev.inv: Ensure you modify the IP addresses in the dev.inv file to match your deployment environment.
-- Customize prometheus.yml: Update the target addresses in the prometheus.yml file to match the specific use case of the website you want to scrape. Replace the sample addresses with your actual blackbox addresses.
-- Ansible Installation: Ensure that Ansible is installed on the Master VM where Jenkins is installed.
-- SSH Configuration: Confirm that the root user on the Master VM can SSH into the root accounts of the Slave and Prometheus VMs without requiring password input (e.g., via SSH keys).
 
 ### Troubleshooting
 
