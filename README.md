@@ -77,7 +77,7 @@ Ensure the following plugins are installed:
 
 ### 3. Define the Jenkinsfile
 
-Include steps in your `Jenkinsfile` to check out the code, build the Docker images, and deploy using Docker Compose. Optionally use Ansible for configuration management across servers.
+Include steps in your [Jenkinsfile](https://github.com/Adlaniq/dev_monorail/blob/main/Jenkinsfile) to check out the code, build the Docker images, and deploy using Docker Compose. Optionally use Ansible for configuration management across servers.
 
 ```groovy
 pipeline {
