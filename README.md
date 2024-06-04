@@ -110,7 +110,7 @@ pipeline {
 }
 ```
 
-[ikan](https://drive.google.com/file/d/13WWE9F22DvoEyFmBofVGI1MP6GUNYR1E/view?usp=sharing)
+![Description of image](https://drive.google.com/uc?export=view&id=13WWE9F22DvoEyFmBofVGI1MP6GUNYR1E)
 
 ### Running the Pipeline
 
