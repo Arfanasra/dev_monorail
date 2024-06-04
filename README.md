@@ -32,7 +32,7 @@ Dev Monorail is a comprehensive web application designed to manage monorail tick
 ### Important Reminders
 
 - Update IP Addresses in dev.inv: Ensure you modify the IP addresses in the dev.inv file to match your deployment environment.
-- Customize prometheus.yml: Update the target addresses in the prometheus.yml file to match the specific use case of the website you want to scrape. Replace the sample addresses with your actual blackbox addresses. File is located in Prometheus/prometheus.yml
+- Customize prometheus.yml: Update the target addresses in the prometheus.yml file to match the specific use case of the website you want to scrape. Replace the sample addresses with your actual blackbox addresses. File is located in [Prometheus/prometheus.yml](https://github.com/Adlaniq/dev_monorail/blob/main/Prometheus/prometheus.yml).
 ```
   - job_name: 'blackbox'
     metrics_path: /probe
