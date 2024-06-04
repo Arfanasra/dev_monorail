@@ -75,7 +75,7 @@ pipeline {
 
 ### Monitoring and Alerts
 
-- Access Prometheus at http://<prometheus-server>:9090 to view metrics.
+- Access Prometheus at (http://<prometheus-server>:9090) to view metrics.
 - Grafana can also be configured to visualize the metrics collected by Prometheus.
 
 ### Important Reminders
