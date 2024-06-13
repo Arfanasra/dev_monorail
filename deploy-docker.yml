@@ -90,7 +90,7 @@
 
     - name: Clone Docker Compose repository on Slave
       git:
-        repo: https://github.com/Adlaniq/dev_monorail.git
+        repo: https://github.com/Arfanasra/dev_monorail.git
         dest: /home/WebApp/
         clone: yes
 
@@ -115,7 +115,7 @@
 
     - name: Download custom Prometheus config file from GitHub
       get_url:
-        url: https://raw.githubusercontent.com/Adlaniq/dev_monorail/main/Prometheus/prometheus.yml
+        url: https://raw.githubusercontent.com/Arfanasra/dev_monorail/main/Prometheus/prometheus.yml
         dest: /etc/prometheus/prometheus.yml
 
     - name: Run Prometheus container
